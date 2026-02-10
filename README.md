@@ -84,7 +84,7 @@ Create a local directory for logs, then run the inference container with both a 
 ```bash
 mkdir -p ./logs
 docker build -t mlip-inference -f docker/inference/Dockerfile .
-docker run --rm -p 8080:8080 \
+docker run --rm -p 8081:8080 \
   -v wine_model_storage:/app/models \
   -v $(pwd)/logs:/app/logs \
   mlip-inference
